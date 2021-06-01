@@ -1,0 +1,37 @@
+<html lang="en" style="--chakra-ui-color-mode:light;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <script defer src="form.js"></script>
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div id="root">
+        <h1 class="header">Наша маленькая соц сеть</h1>
+
+        <button class="btn-add" id="btn-add">Добавить статью</button>
+    
+        <form id="add-post" class="form hide">
+            <input id="add-header" type="text" name="header" class="title" placeholder="Заголовок статьи">
+            <input id="add-poster" type="file" name="poster">
+            <input id="add-link" type="text" name="link" placeholder="Вставьте ссылку на источник">
+            <textarea id="add-text" name="text" cols="3" rows="3" placeholder="Текст статьи"></textarea>
+            <button type="submit" class="add-post__submit">Отправить</button>
+        </form>
+
+        <main class="wrapper">
+            <h2 class="header2">Посты</h2>
+            <ul class="posts__list" id="posts-list">
+                
+            </ul>
+        </main>
+    </div>
+</body>
+
+</html>
