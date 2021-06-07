@@ -19,7 +19,7 @@ function createPost({ header, poster, text, id, link }) {
     headerLink.href = link;
 
     const h4 = document.createElement('h4');
-    h4.classList.add('post__header')
+    h4.classList.add('post__header');
     h4.textContent = header;
 
     const posterWrapper = document.createElement('div');
@@ -45,13 +45,13 @@ function createPost({ header, poster, text, id, link }) {
 
 async function init() {
     postsList.innerHTML = '';
-    const responce = await fetch('http://inno-ijl.ru/multystub/stc-21-03/posts', {
+    const response = await fetch('http://inno-ijl.ru/multystub/stc-21-03/posts', {
         cors: 'no-cors'
     });
-    const posts = await responce.json();
+    const posts = await response.json();
 
-    for (let i = 0; i < posts.body.length; i++) {
-        const post = createPost(posts.body[i]);
+    for (const pos of posts.body) {
+        const post = createPost(pos);
         postsList.append(post);
     }
 }
